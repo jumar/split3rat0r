@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:ortho practice-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -20,7 +19,7 @@ U 1 1 5CBCC3D1
 P 9050 5950
 F 0 "U1" H 9050 6987 60  0000 C CNN
 F 1 "ProMicro" H 9050 6881 60  0000 C CNN
-F 2 "keebs:Pro_Micro" H 9150 4900 60  0001 C CNN
+F 2 "promicro:ProMicro" H 9150 4900 60  0001 C CNN
 F 3 "" H 9150 4900 60  0000 C CNN
 	1    9050 5950
 	1    0    0    -1  
