@@ -1198,9 +1198,6 @@ NoConn ~ 8900 2600
 NoConn ~ 8900 2700
 NoConn ~ 8900 2850
 NoConn ~ 8900 2950
-NoConn ~ 8900 3700
-NoConn ~ 8900 3800
-NoConn ~ 8900 3950
 NoConn ~ 9950 4350
 NoConn ~ 9950 4450
 NoConn ~ 9950 4550
@@ -1307,4 +1304,113 @@ F 3 "~" H 8000 6200 50  0001 C CNN
 	1    8000 6200
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:LED LD1
+U 1 1 5CD186EE
+P 10100 950
+F 0 "LD1" H 10093 695 50  0000 C CNN
+F 1 "LED" H 10093 786 50  0000 C CNN
+F 2 "keeb_parts:LED_TH" H 10100 950 50  0001 C CNN
+F 3 "~" H 10100 950 50  0001 C CNN
+	1    10100 950 
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED LD2
+U 1 1 5CD19CA1
+P 10100 1350
+F 0 "LD2" H 10093 1095 50  0000 C CNN
+F 1 "LED" H 10093 1186 50  0000 C CNN
+F 2 "keeb_parts:LED_TH" H 10100 1350 50  0001 C CNN
+F 3 "~" H 10100 1350 50  0001 C CNN
+	1    10100 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED LD3
+U 1 1 5CD19E40
+P 10100 1750
+F 0 "LD3" H 10093 1495 50  0000 C CNN
+F 1 "LED" H 10093 1586 50  0000 C CNN
+F 2 "keeb_parts:LED_TH" H 10100 1750 50  0001 C CNN
+F 3 "~" H 10100 1750 50  0001 C CNN
+	1    10100 1750
+	-1   0    0    1   
+$EndComp
+$Comp
+L keeb_parts:GND #PWR0105
+U 1 1 5CD1D128
+P 10500 2050
+F 0 "#PWR0105" H 10500 2100 20  0001 C CNN
+F 1 "GND" H 10500 2109 30  0000 C CNN
+F 2 "" H 10500 2050 60  0000 C CNN
+F 3 "" H 10500 2050 60  0000 C CNN
+	1    10500 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 1750 10500 1750
+Wire Wire Line
+	10500 1350 10250 1350
+Wire Wire Line
+	10250 950  10500 950 
+Text Label 9200 950  0    50   ~ 0
+led1
+Text Label 9200 1350 0    50   ~ 0
+led2
+Text Label 9200 1750 0    50   ~ 0
+led3
+$Comp
+L keeb_parts:R R1
+U 1 1 5CD54691
+P 9700 950
+F 0 "R1" V 9492 950 50  0000 C CNN
+F 1 "R 1.5k" V 9583 950 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" H 9700 950 60  0001 C CNN
+F 3 "" H 9700 950 60  0000 C CNN
+	1    9700 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L keeb_parts:R R2
+U 1 1 5CD55293
+P 9700 1350
+F 0 "R2" V 9492 1350 50  0000 C CNN
+F 1 "R 1.5k" V 9583 1350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" H 9700 1350 60  0001 C CNN
+F 3 "" H 9700 1350 60  0000 C CNN
+	1    9700 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L keeb_parts:R R3
+U 1 1 5CD55692
+P 9700 1750
+F 0 "R3" V 9492 1750 50  0000 C CNN
+F 1 "R 1.5k" V 9583 1750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" H 9700 1750 60  0001 C CNN
+F 3 "" H 9700 1750 60  0000 C CNN
+	1    9700 1750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9200 950  9450 950 
+Wire Wire Line
+	9450 1350 9200 1350
+Wire Wire Line
+	9200 1750 9450 1750
+Wire Wire Line
+	10500 950  10500 1350
+Connection ~ 10500 1750
+Connection ~ 10500 1350
+Wire Wire Line
+	10500 1350 10500 1750
+Wire Wire Line
+	10500 1750 10500 2050
+Text Label 8900 3700 0    50   ~ 0
+led1
+Text Label 8900 3800 0    50   ~ 0
+led2
+Text Label 8900 3950 0    50   ~ 0
+led3
 $EndSCHEMATC
