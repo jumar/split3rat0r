@@ -1170,17 +1170,6 @@ F 3 "" H 7700 3700 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keeb_parts:TEENSY2.0 U1
-U 1 1 5CD0FF01
-P 8300 3300
-F 0 "U1" H 8300 4847 60  0000 C CNN
-F 1 "TEENSY2.0" H 8300 4741 60  0000 C CNN
-F 2 "keeb:Teensy_20" H 8300 3300 60  0001 C CNN
-F 3 "" H 8300 3300 60  0000 C CNN
-	1    8300 3300
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:VCC #PWR0102
 U 1 1 5CE9DD15
 P 7700 3800
@@ -1193,14 +1182,9 @@ F 3 "" H 7700 3800 50  0001 C CNN
 $EndComp
 NoConn ~ 7700 2000
 NoConn ~ 7700 2100
-NoConn ~ 8900 2500
-NoConn ~ 8900 2600
 NoConn ~ 8900 2700
 NoConn ~ 8900 2850
 NoConn ~ 8900 2950
-NoConn ~ 8900 3700
-NoConn ~ 8900 3800
-NoConn ~ 8900 3950
 NoConn ~ 9950 4350
 NoConn ~ 9950 4450
 NoConn ~ 9950 4550
@@ -1307,4 +1291,160 @@ F 3 "~" H 8000 6200 50  0001 C CNN
 	1    8000 6200
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:LED LD1
+U 1 1 5CD186EE
+P 10100 950
+F 0 "LD1" H 10093 695 50  0000 C CNN
+F 1 "LED" H 10093 786 50  0000 C CNN
+F 2 "keeb_parts:LED_TH" H 10100 950 50  0001 C CNN
+F 3 "~" H 10100 950 50  0001 C CNN
+	1    10100 950 
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED LD2
+U 1 1 5CD19CA1
+P 10100 1350
+F 0 "LD2" H 10093 1095 50  0000 C CNN
+F 1 "LED" H 10093 1186 50  0000 C CNN
+F 2 "keeb_parts:LED_TH" H 10100 1350 50  0001 C CNN
+F 3 "~" H 10100 1350 50  0001 C CNN
+	1    10100 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED LD3
+U 1 1 5CD19E40
+P 10100 1750
+F 0 "LD3" H 10093 1495 50  0000 C CNN
+F 1 "LED" H 10093 1586 50  0000 C CNN
+F 2 "keeb_parts:LED_TH" H 10100 1750 50  0001 C CNN
+F 3 "~" H 10100 1750 50  0001 C CNN
+	1    10100 1750
+	-1   0    0    1   
+$EndComp
+$Comp
+L keeb_parts:GND #PWR0105
+U 1 1 5CD1D128
+P 10500 2050
+F 0 "#PWR0105" H 10500 2100 20  0001 C CNN
+F 1 "GND" H 10500 2109 30  0000 C CNN
+F 2 "" H 10500 2050 60  0000 C CNN
+F 3 "" H 10500 2050 60  0000 C CNN
+	1    10500 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 1750 10500 1750
+Wire Wire Line
+	10500 1350 10250 1350
+Wire Wire Line
+	10250 950  10500 950 
+Text Label 9200 950  0    50   ~ 0
+led1
+Text Label 9200 1350 0    50   ~ 0
+led2
+Text Label 9200 1750 0    50   ~ 0
+led3
+$Comp
+L keeb_parts:R R1
+U 1 1 5CD54691
+P 9700 950
+F 0 "R1" V 9492 950 50  0000 C CNN
+F 1 "R 1.5k" V 9583 950 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" H 9700 950 60  0001 C CNN
+F 3 "" H 9700 950 60  0000 C CNN
+	1    9700 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L keeb_parts:R R2
+U 1 1 5CD55293
+P 9700 1350
+F 0 "R2" V 9492 1350 50  0000 C CNN
+F 1 "R 1.5k" V 9583 1350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" H 9700 1350 60  0001 C CNN
+F 3 "" H 9700 1350 60  0000 C CNN
+	1    9700 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L keeb_parts:R R3
+U 1 1 5CD55692
+P 9700 1750
+F 0 "R3" V 9492 1750 50  0000 C CNN
+F 1 "R 1.5k" V 9583 1750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" H 9700 1750 60  0001 C CNN
+F 3 "" H 9700 1750 60  0000 C CNN
+	1    9700 1750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9200 950  9450 950 
+Wire Wire Line
+	9450 1350 9200 1350
+Wire Wire Line
+	9200 1750 9450 1750
+Wire Wire Line
+	10500 950  10500 1350
+Connection ~ 10500 1750
+Connection ~ 10500 1350
+Wire Wire Line
+	10500 1350 10500 1750
+Wire Wire Line
+	10500 1750 10500 2050
+Text Label 8900 3700 0    50   ~ 0
+led1
+Text Label 8900 3800 0    50   ~ 0
+led2
+Text Label 8900 3950 0    50   ~ 0
+led3
+$Comp
+L Device:Rotary_Encoder SW1
+U 1 1 5CD3077D
+P 9950 5500
+F 0 "SW1" H 10180 5546 50  0000 L CNN
+F 1 "Rotary_Encoder" H 10180 5455 50  0000 L CNN
+F 2 "" H 9800 5660 50  0001 C CNN
+F 3 "~" H 9950 5760 50  0001 C CNN
+	1    9950 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L keeb_parts:GND #PWR?
+U 1 1 5CD320A5
+P 9300 5500
+F 0 "#PWR?" H 9300 5550 20  0001 C CNN
+F 1 "GND" H 9300 5559 30  0000 C CNN
+F 2 "" H 9300 5500 60  0000 C CNN
+F 3 "" H 9300 5500 60  0000 C CNN
+	1    9300 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L keeb_parts:TEENSY2.0 U1
+U 1 1 5CD0FF01
+P 8300 3300
+F 0 "U1" H 8300 4847 60  0000 C CNN
+F 1 "TEENSY2.0" H 8300 4741 60  0000 C CNN
+F 2 "keeb:Teensy_20" H 8300 3300 60  0001 C CNN
+F 3 "" H 8300 3300 60  0000 C CNN
+	1    8300 3300
+	1    0    0    -1  
+$EndComp
+Text Label 8900 2500 0    50   ~ 0
+enc1
+Text Label 8900 2600 0    50   ~ 0
+enc2
+Text Label 9450 5400 0    50   ~ 0
+enc1
+Text Label 9450 5600 0    50   ~ 0
+enc2
+Wire Wire Line
+	9300 5500 9650 5500
+Wire Wire Line
+	9450 5600 9650 5600
+Wire Wire Line
+	9450 5400 9650 5400
 $EndSCHEMATC

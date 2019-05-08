@@ -1170,17 +1170,6 @@ F 3 "" H 7700 3700 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keeb_parts:TEENSY2.0 U1
-U 1 1 5CD0FF01
-P 8300 3300
-F 0 "U1" H 8300 4847 60  0000 C CNN
-F 1 "TEENSY2.0" H 8300 4741 60  0000 C CNN
-F 2 "keeb:Teensy_20" H 8300 3300 60  0001 C CNN
-F 3 "" H 8300 3300 60  0000 C CNN
-	1    8300 3300
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:VCC #PWR0102
 U 1 1 5CE9DD15
 P 7700 3800
@@ -1193,9 +1182,6 @@ F 3 "" H 7700 3800 50  0001 C CNN
 $EndComp
 NoConn ~ 7700 2000
 NoConn ~ 7700 2100
-NoConn ~ 8900 2500
-NoConn ~ 8900 2600
-NoConn ~ 8900 2700
 NoConn ~ 8900 2850
 NoConn ~ 8900 2950
 NoConn ~ 9950 4350
@@ -1413,4 +1399,60 @@ Text Label 8900 3800 0    50   ~ 0
 led2
 Text Label 8900 3950 0    50   ~ 0
 led3
+$Comp
+L keeb_parts:TEENSY2.0 U1
+U 1 1 5CD0FF01
+P 8300 3300
+F 0 "U1" H 8300 4847 60  0000 C CNN
+F 1 "TEENSY2.0" H 8300 4741 60  0000 C CNN
+F 2 "keeb:Teensy_20" H 8300 3300 60  0001 C CNN
+F 3 "" H 8300 3300 60  0000 C CNN
+	1    8300 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW1
+U 1 1 5CD9B11F
+P 6750 6400
+F 0 "SW1" H 6750 6767 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 6750 6676 50  0000 C CNN
+F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 6600 6560 50  0001 C CNN
+F 3 "~" H 6750 6660 50  0001 C CNN
+	1    6750 6400
+	1    0    0    -1  
+$EndComp
+Connection ~ 7050 5500
+Wire Wire Line
+	7050 5500 7050 6300
+Wire Wire Line
+	7050 6500 7400 6500
+Text Label 7400 6500 0    50   ~ 0
+row6
+Wire Wire Line
+	6450 6400 6000 6400
+$Comp
+L keeb_parts:GND #PWR?
+U 1 1 5CDF87FD
+P 6000 6400
+F 0 "#PWR?" H 6000 6450 20  0001 C CNN
+F 1 "GND" H 6000 6459 30  0000 C CNN
+F 2 "" H 6000 6400 60  0000 C CNN
+F 3 "" H 6000 6400 60  0000 C CNN
+	1    6000 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 6300 6250 6300
+Wire Wire Line
+	6450 6500 6200 6500
+Text Label 6200 6500 0    50   ~ 0
+encB
+Text Label 6250 6300 0    50   ~ 0
+encA
+Text Label 8900 2500 0    50   ~ 0
+row6
+Text Label 8900 2600 0    50   ~ 0
+encB
+Text Label 8900 2700 0    50   ~ 0
+encA
 $EndSCHEMATC
